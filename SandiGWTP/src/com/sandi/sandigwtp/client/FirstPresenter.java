@@ -8,6 +8,7 @@ import com.sandi.sandigwtp.client.place.NameTokens;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
+import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 import com.google.inject.Inject;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -15,7 +16,6 @@ import com.google.gwt.event.shared.EventBus;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
-import com.gwtplatform.mvp.client.proxy.RevealRootContentEvent;
 
 public class FirstPresenter extends
 		Presenter<FirstPresenter.MyView, FirstPresenter.MyProxy> {
@@ -41,7 +41,7 @@ public class FirstPresenter extends
 
 	@Override
 	protected void revealInParent() {
-		RevealRootContentEvent.fire(this, this);
+		RevealContentEvent.fire(this, HeaderPresenter.SLOT_content, this);
 	}
 
 	@Override
