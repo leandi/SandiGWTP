@@ -13,6 +13,8 @@ import com.sandi.sandigwtp.client.HeaderPresenter;
 import com.sandi.sandigwtp.client.HeaderView;
 import com.sandi.sandigwtp.client.ThirdPresenter;
 import com.sandi.sandigwtp.client.ThirdView;
+import com.sandi.sandigwtp.client.RatePagePresenter;
+import com.sandi.sandigwtp.client.RatePageView;
 
 public class ClientModule extends AbstractPresenterModule {
 
@@ -33,5 +35,8 @@ public class ClientModule extends AbstractPresenterModule {
 
 		bindPresenter(ThirdPresenter.class, ThirdPresenter.MyView.class,
 				ThirdView.class, ThirdPresenter.MyProxy.class);
+
+		bindPresenterWidget(RatePagePresenter.class,
+				RatePagePresenter.MyView.class, RatePageView.class);
 	}
 }
