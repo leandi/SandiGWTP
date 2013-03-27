@@ -20,14 +20,18 @@ import com.google.gwt.user.client.ui.TextBox;
 public class FirstPresenter extends
 		Presenter<FirstPresenter.MyView, FirstPresenter.MyProxy> {
 
+	public static final Object SLOT_rate = new Object();
+	
 	public interface MyView extends View {
 		public Label getFirstLabel();
 		
 		public TextBox getFirstBox();
 		
 		public Button getFirstButton();
-}
-
+	}
+	
+	@Inject RatePagePresenter ratePagePresenter;
+	
 	@ProxyCodeSplit
 	@NameToken(NameTokens.first)
 	public interface MyProxy extends ProxyPlace<FirstPresenter> {
@@ -55,6 +59,8 @@ public class FirstPresenter extends
 	@Override
 	protected void onReset() {
 		super.onReset();
+		
+		setInSlot(SLOT_rate, ratePagePresenter);
 		
 		getView().getFirstBox().setText("Poljubni tekst");
 		

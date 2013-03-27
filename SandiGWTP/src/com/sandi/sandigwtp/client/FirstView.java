@@ -8,6 +8,7 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.HTMLPanel;
 
 public class FirstView extends ViewImpl implements FirstPresenter.MyView {
 
@@ -16,6 +17,7 @@ public class FirstView extends ViewImpl implements FirstPresenter.MyView {
 	@UiField Label firstLabel;
 	@UiField TextBox firstBox;
 	@UiField Button firstButton;
+	@UiField HTMLPanel ratePanel;
 
 	public interface Binder extends UiBinder<Widget, FirstView> {
 	}
@@ -25,6 +27,21 @@ public class FirstView extends ViewImpl implements FirstPresenter.MyView {
 		widget = binder.createAndBindUi(this);
 	}
 
+	@Override
+	public void setInSlot(Object slot, Widget content) 
+	{
+		if (slot == FirstPresenter.SLOT_rate) 
+		{
+			ratePanel.clear();
+			
+			if (content != null) 
+			{
+				ratePanel.add(content);
+			}
+		} else 
+			{super.setInSlot(slot, content);}
+	}
+	
 	@Override
 	public Widget asWidget() {
 		return widget;
