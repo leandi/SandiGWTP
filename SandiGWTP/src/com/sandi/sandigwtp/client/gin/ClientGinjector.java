@@ -7,6 +7,7 @@ import com.google.gwt.inject.client.Ginjector;
 import com.google.gwt.event.shared.EventBus;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.google.gwt.inject.client.AsyncProvider;
+import com.google.inject.Provider;
 import com.sandi.sandigwtp.client.FirstPresenter;
 import com.sandi.sandigwtp.client.SecondPresenter;
 import com.sandi.sandigwtp.client.HeaderPresenter;
@@ -19,7 +20,9 @@ public interface ClientGinjector extends Ginjector {
 
 	PlaceManager getPlaceManager();
 
-	AsyncProvider<FirstPresenter> getFirstPresenter();
+//	code split
+//	AsyncProvider<FirstPresenter> getFirstPresenter();
+	Provider<FirstPresenter> getFirstPresenter();
 
 	AsyncProvider<SecondPresenter> getSecondPresenter();
 

@@ -2,8 +2,8 @@ package com.sandi.sandigwtp.client;
 
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
-import com.gwtplatform.mvp.client.annotations.ProxyCodeSplit;
 import com.gwtplatform.mvp.client.annotations.NameToken;
+import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.sandi.sandigwtp.client.place.NameTokens;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.PlaceRequest;
@@ -32,7 +32,10 @@ public class FirstPresenter extends
 	
 	@Inject RatePagePresenter ratePagePresenter;
 	
-	@ProxyCodeSplit
+	
+	//code split
+	//@ProxyCodeSplit
+	@ProxyStandard
 	@NameToken(NameTokens.first)
 	public interface MyProxy extends ProxyPlace<FirstPresenter> {
 	}
