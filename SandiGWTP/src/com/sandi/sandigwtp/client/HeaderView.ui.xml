@@ -8,6 +8,7 @@
 
 	<g:HTMLPanel>
 	    <h1> Header for Sandi's page</h1>
+	    <g:Label text="Welcome happy user!" ui:field="happyLabel"/>
 	    <hr/>
 	    <g:HTMLPanel ui:field="contentPanel"/>
 	</g:HTMLPanel>

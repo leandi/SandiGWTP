@@ -19,9 +19,13 @@ public class RatePagePresenter extends
 		public Button getNoButton();
 }
 
+	private EventBus eventBus;
+	
 	@Inject
 	public RatePagePresenter(final EventBus eventBus, final MyView view) {
 		super(eventBus, view);
+		
+		this.eventBus = eventBus;
 	}
 
 	@Override
@@ -41,6 +45,10 @@ public class RatePagePresenter extends
 			
 			@Override
 			public void onClick(ClickEvent event) {
+				UserNotHappyEvent userNotHappyEvent = new UserNotHappyEvent();
+				RatePagePresenter.this.eventBus.fireEvent(userNotHappyEvent);
+				
+				
 				//Window.alert("Žal mi je da moram to slišat!");
 				addToPopupSlot(whyNotPresenter);
 			}
