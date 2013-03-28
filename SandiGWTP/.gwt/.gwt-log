@@ -4091,3 +4091,75 @@ Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime13644728068
       Compiling...
          Compilation completed in 0,00 seconds
       Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView.Binder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0,05 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474120487.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474120487.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0,00 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474120487_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0,02 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView.Binder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0,01 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474241614.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474241614.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0,01 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474241614_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0,01 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView.Binder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0,01 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474293377.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474293377.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0,00 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474293377_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0,00 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView.Binder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0,01 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474322868.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474322868.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0,00 seconds
+      Removing invalidated units
+Rebinding com.sandi.sandigwtp.client.WhyNotView_BinderImpl_designTime1364474322868_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0,00 seconds
+      Removing invalidated units

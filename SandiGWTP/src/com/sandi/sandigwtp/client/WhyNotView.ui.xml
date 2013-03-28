@@ -6,7 +6,7 @@
 	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
 	ui:generateLocales='default'>
 
-	<g:PopupPanel>
+	<g:PopupPanel modal="true" glassEnabled="true">
 		<g:HTMLPanel>
 			<B>Why not?</B>
 			<g:TextArea></g:TextArea>
