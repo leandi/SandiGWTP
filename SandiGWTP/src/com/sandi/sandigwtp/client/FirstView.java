@@ -38,8 +38,11 @@ public class FirstView extends ViewImpl implements FirstPresenter.MyView {
 			{
 				ratePanel.add(content);
 			}
-		} else 
-			{super.setInSlot(slot, content);}
+		} 	
+		else 
+			{
+			super.setInSlot(slot, content);
+			}
 	}
 	
 	@Override

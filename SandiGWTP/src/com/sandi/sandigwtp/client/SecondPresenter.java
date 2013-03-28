@@ -1,5 +1,7 @@
 package com.sandi.sandigwtp.client;
 
+import com.gwtplatform.common.client.IndirectProvider;
+import com.gwtplatform.common.client.StandardProvider;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
 import com.gwtplatform.mvp.client.annotations.ProxyCodeSplit;
@@ -9,12 +11,16 @@ import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 import com.google.inject.Inject;
+import com.google.inject.Provider;
 import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Label;
 
 public class SecondPresenter extends
 		Presenter<SecondPresenter.MyView, SecondPresenter.MyProxy> {
 
+	public static final Object SLOT_list = new Object();
+	
 	public interface MyView extends View {
 		public Label getSecondLabel();
 	}
@@ -23,11 +29,15 @@ public class SecondPresenter extends
 	@NameToken(NameTokens.second)
 	public interface MyProxy extends ProxyPlace<SecondPresenter> {
 	}
-
+	
+	private IndirectProvider<RatePagePresenter> ratePageFactory;
+	
 	@Inject
 	public SecondPresenter(final EventBus eventBus, final MyView view,
-			final MyProxy proxy) {
+			final MyProxy proxy,Provider<RatePagePresenter> ratePageFactory) {
 		super(eventBus, view, proxy);
+		
+		this.ratePageFactory = new StandardProvider<RatePagePresenter>(ratePageFactory);
 	}
 
 	@Override
@@ -53,5 +63,23 @@ public class SecondPresenter extends
 		super.onReset();
 		
 		getView().getSecondLabel().setText(name);
+		
+		setInSlot(SLOT_list, null);
+		
+		for (int i = 0; i < 3; i++) {
+			ratePageFactory.get(new AsyncCallback<RatePagePresenter>() {
+				
+				@Override
+				public void onSuccess(RatePagePresenter result) {
+					addToSlot(SLOT_list, result);
+				}
+				
+				@Override
+				public void onFailure(Throwable caught) {
+					// TODO Auto-generated method stub
+					
+				}
+			});
+		}
 	}
 }

@@ -9,5 +9,6 @@
 	<g:HTMLPanel>
 		<g:Hyperlink text="Back to First" targetHistoryToken="first"/>
 		<g:Label text="secondLabel" ui:field="secondLabel"/>
+		<g:HTMLPanel ui:field="listPanel" />
 	</g:HTMLPanel>
 </ui:UiBinder>
