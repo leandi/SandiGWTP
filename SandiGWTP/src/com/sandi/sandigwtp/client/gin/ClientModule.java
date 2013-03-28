@@ -15,6 +15,8 @@ import com.sandi.sandigwtp.client.ThirdPresenter;
 import com.sandi.sandigwtp.client.ThirdView;
 import com.sandi.sandigwtp.client.RatePagePresenter;
 import com.sandi.sandigwtp.client.RatePageView;
+import com.sandi.sandigwtp.client.WhyNotPresenter;
+import com.sandi.sandigwtp.client.WhyNotView;
 
 public class ClientModule extends AbstractPresenterModule {
 
@@ -38,5 +40,8 @@ public class ClientModule extends AbstractPresenterModule {
 
 		bindPresenterWidget(RatePagePresenter.class,
 				RatePagePresenter.MyView.class, RatePageView.class);
+
+		bindPresenterWidget(WhyNotPresenter.class,
+				WhyNotPresenter.MyView.class, WhyNotView.class);
 	}
 }

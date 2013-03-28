@@ -11,6 +11,8 @@ import com.google.gwt.user.client.ui.Button;
 
 public class RatePagePresenter extends
 		PresenterWidget<RatePagePresenter.MyView> {
+	
+	@Inject WhyNotPresenter whyNotPresenter;
 
 	public interface MyView extends View {
 		public Button getYesButton();
@@ -39,8 +41,8 @@ public class RatePagePresenter extends
 			
 			@Override
 			public void onClick(ClickEvent event) {
-				Window.alert("Žal mi je da moram to slišat!");
-				
+				//Window.alert("Žal mi je da moram to slišat!");
+				addToPopupSlot(whyNotPresenter);
 			}
 		});
 	}
