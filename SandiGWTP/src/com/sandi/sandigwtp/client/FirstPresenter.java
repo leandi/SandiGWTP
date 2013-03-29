@@ -1,5 +1,6 @@
 package com.sandi.sandigwtp.client;
 
+import com.gwtplatform.dispatch.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
 import com.gwtplatform.mvp.client.annotations.NameToken;
@@ -13,6 +14,7 @@ import com.google.inject.Inject;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.TextBox;
@@ -56,8 +58,9 @@ public class FirstPresenter extends
 		super.onBind();
 	}
 	
-	@Inject
-	PlaceManager placeManager;
+	@Inject PlaceManager placeManager;
+	@Inject DispatchAsync dispatchAsync;
+	
 	
 	@Override
 	protected void onReset() {
@@ -77,4 +80,8 @@ public class FirstPresenter extends
 			}
 		});
 	}
+	
+	private AsyncCallback<GetFirstActionResult> getFirstActionCallback = new AsyncCallback<GetFirstActionResult>() {
+	}; {
+	};
 }
