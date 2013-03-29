@@ -1,5 +1,6 @@
 package com.sandi.sandigwtp.client.gin;
 
+import com.gwtplatform.dispatch.shared.SecurityCookie;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 import com.sandi.sandigwtp.client.place.ClientPlaceManager;
@@ -30,6 +31,8 @@ public class ClientModule extends AbstractPresenterModule {
 
 		bindPresenter(FirstPresenter.class, FirstPresenter.MyView.class,
 				FirstView.class, FirstPresenter.MyProxy.class);
+		
+		bindConstant().annotatedWith(SecurityCookie.class).to("MYCOOKIE");
 
 		bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.first);
 

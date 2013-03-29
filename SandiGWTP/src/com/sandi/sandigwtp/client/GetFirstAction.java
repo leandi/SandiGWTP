@@ -8,12 +8,13 @@ public class GetFirstAction extends ActionImpl<GetFirstActionResult> {
 
 	private String text;
 	
-	@Override
+
+/*	@Override
 	public boolean isSecured() {
 		return false;
-//cross security gwt
+// cross security gwt
 	}
-
+*/
 	@SuppressWarnings("unused")
 	private GetFirstAction() {
 		// For serialization only
