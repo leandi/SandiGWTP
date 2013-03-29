@@ -14,6 +14,7 @@ import com.google.inject.Inject;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.thirdparty.javascript.jscomp.ParallelCompilerPass.Result;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Label;
@@ -74,14 +75,28 @@ public class FirstPresenter extends
 			
 			@Override
 			public void onClick(ClickEvent event) {
+				GetFirstAction action = new GetFirstAction(getView().getFirstBox().getText());
+				dispatchAsync.execute(action, getFirstActionCallback);
 //				PlaceRequest request = new PlaceRequest(NameTokens.second);
-				PlaceRequest request = new PlaceRequest(NameTokens.second).with("name", getView().getFirstBox().getText());
-				placeManager.revealPlace(request);
+//				PlaceRequest request = new PlaceRequest(NameTokens.second).with("name", getView().getFirstBox().getText());
+//				placeManager.revealPlace(request);
 			}
 		});
 	}
 	
-	private AsyncCallback<GetFirstActionResult> getFirstActionCallback = new AsyncCallback<GetFirstActionResult>() {
-	}; {
-	};
+	AsyncCallback<GetFirstActionResult> getFirstActionCallback = new AsyncCallback<GetFirstActionResult>() {
+		
+		@Override
+		public void onSuccess(GetFirstActionResult result) {
+			PlaceRequest request = new PlaceRequest(NameTokens.second).with("name", result.getText());
+			placeManager.revealPlace(request);
+			
+		}
+		
+		@Override
+		public void onFailure(Throwable caught) {
+			// TODO Auto-generated method stub
+			
+		}
+	}; 
 }
