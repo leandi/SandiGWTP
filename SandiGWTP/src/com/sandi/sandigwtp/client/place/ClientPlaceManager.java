@@ -23,4 +23,12 @@ public class ClientPlaceManager extends PlaceManagerImpl {
 	public void revealDefaultPlace() {
 		revealPlace(defaultPlaceRequest, false);
 	}
+	
+	@Override
+	public void revealErrorPlace(String invalidHistoryToken) {
+		PlaceRequest request = new PlaceRequest(NameTokens.error);
+		revealPlace(request,false);
+	}
+	
+	
 }

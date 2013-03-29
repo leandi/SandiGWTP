@@ -17,6 +17,8 @@ import com.sandi.sandigwtp.client.RatePagePresenter;
 import com.sandi.sandigwtp.client.RatePageView;
 import com.sandi.sandigwtp.client.WhyNotPresenter;
 import com.sandi.sandigwtp.client.WhyNotView;
+import com.sandi.sandigwtp.client.ErrorPresenter;
+import com.sandi.sandigwtp.client.ErrorView;
 
 public class ClientModule extends AbstractPresenterModule {
 
@@ -43,5 +45,8 @@ public class ClientModule extends AbstractPresenterModule {
 
 		bindPresenterWidget(WhyNotPresenter.class,
 				WhyNotPresenter.MyView.class, WhyNotView.class);
+
+		bindPresenter(ErrorPresenter.class, ErrorPresenter.MyView.class,
+				ErrorView.class, ErrorPresenter.MyProxy.class);
 	}
 }
