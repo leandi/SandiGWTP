@@ -30,5 +30,14 @@ public class ClientPlaceManager extends PlaceManagerImpl {
 		revealPlace(request,false);
 	}
 	
+	@Override
+	public void revealUnauthorizedPlace(String unauthorizedHistoryToken) {
+
+		//to poskusi zvedez kako zgleda koda login page lesson 8
+		PlaceRequest current = getCurrentPlaceRequest();
+		//to poskusi zvedez kako zgleda koda login page lesson 8
+		PlaceRequest request = new PlaceRequest(NameTokens.login);
+		revealPlace(request);
+	}
 	
 }

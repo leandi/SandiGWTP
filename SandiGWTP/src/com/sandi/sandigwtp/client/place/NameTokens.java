@@ -6,6 +6,7 @@ public class NameTokens {
 	public static final String second = "second";
 	public static final String third = "third";
 	public static final String error = "error";
+	public static final String login = "login";
 
 	public static String getFirst() {
 		return first;
@@ -21,5 +22,9 @@ public class NameTokens {
 
 	public static String getError() {
 		return error;
+	}
+
+	public static String getLogin() {
+		return login;
 	}
 }

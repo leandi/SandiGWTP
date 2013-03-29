@@ -11,8 +11,10 @@ import com.google.inject.Provider;
 import com.sandi.sandigwtp.client.FirstPresenter;
 import com.sandi.sandigwtp.client.SecondPresenter;
 import com.sandi.sandigwtp.client.HeaderPresenter;
+import com.sandi.sandigwtp.client.TestGatekeeper;
 import com.sandi.sandigwtp.client.ThirdPresenter;
 import com.sandi.sandigwtp.client.ErrorPresenter;
+import com.sandi.sandigwtp.client.LoginPresenter;
 
 @GinModules({ DispatchAsyncModule.class, ClientModule.class })
 public interface ClientGinjector extends Ginjector {
@@ -32,4 +34,8 @@ public interface ClientGinjector extends Ginjector {
 	AsyncProvider<ThirdPresenter> getThirdPresenter();
 
 	AsyncProvider<ErrorPresenter> getErrorPresenter();
+	
+	TestGatekeeper getGatekeeper();
+
+	AsyncProvider<LoginPresenter> getLoginPresenter();
 }

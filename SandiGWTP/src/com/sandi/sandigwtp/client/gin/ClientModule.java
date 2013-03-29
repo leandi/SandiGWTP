@@ -19,6 +19,8 @@ import com.sandi.sandigwtp.client.WhyNotPresenter;
 import com.sandi.sandigwtp.client.WhyNotView;
 import com.sandi.sandigwtp.client.ErrorPresenter;
 import com.sandi.sandigwtp.client.ErrorView;
+import com.sandi.sandigwtp.client.LoginPresenter;
+import com.sandi.sandigwtp.client.LoginView;
 
 public class ClientModule extends AbstractPresenterModule {
 
@@ -48,5 +50,8 @@ public class ClientModule extends AbstractPresenterModule {
 
 		bindPresenter(ErrorPresenter.class, ErrorPresenter.MyView.class,
 				ErrorView.class, ErrorPresenter.MyProxy.class);
+
+		bindPresenter(LoginPresenter.class, LoginPresenter.MyView.class,
+				LoginView.class, LoginPresenter.MyProxy.class);
 	}
 }
